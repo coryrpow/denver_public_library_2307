@@ -10,9 +10,12 @@ class Library
 
   end
 
-  def add_author(data)
-    author = Author.new(data)
+  def add_author(author)
+    # author = Author.new(data)
     @authors << author
+    author.books.each do |book|
+      @books << book
+    end
   end
 
 
